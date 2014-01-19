@@ -246,34 +246,9 @@
 		.perfil
 		{
 			max-height: 127px !important;
+			border-radius: 50%;
+
 		}
-		
-			/* Uncomment the block below if you want linked images to highlight on hover */
-		
-			/*
-			a.image:before
-			{
-				content: '';
-				display: block;
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background: #fff;
-				opacity: 0;
-				-moz-transition: opacity 0.35s ease-in-out;
-				-webkit-transition: opacity 0.35s ease-in-out;
-				-o-transition: opacity 0.35s ease-in-out;
-				-ms-transition: opacity 0.35s ease-in-out;
-				transition: opacity 0.35s ease-in-out;
-			}
-			
-				a.image:hover:before
-				{
-					opacity: 0.15;
-				}
-			*/
 		
 			.image img
 			{
