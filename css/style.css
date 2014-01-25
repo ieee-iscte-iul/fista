@@ -457,7 +457,7 @@
 			
 				table.style1 tbody tr:nth-child(2n+2)
 				{
-					background: #f4f4f4;
+					background: rgba(197, 197, 197, 0.05);
 				}
 				
 				table.style1 td
@@ -1571,3 +1571,8 @@
 			{
 				text-align: center;
 			}
+
+			@media (max-width:40em) {
+    table, thead, tbody, tfoot, th, td, tr { display:block; }
+    tr + tr { margin-top:1em; }
+}
