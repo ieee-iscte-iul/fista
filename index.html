@@ -22,10 +22,15 @@
 		</noscript>
 
 		<style>
-	      html, body, #map_canvas {
+	      html, body {
 	        margin: 0;
 	        padding: 0;
 	        height: 100%;
+	      }
+	      #map_canvas {
+	      	margin: 0;
+	        padding: 0;
+	        height: 270px;
 	      }
 	      .image.perfil.slider {
 	      	margin-bottom: 10px;
@@ -51,16 +56,22 @@
 	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	    <script>
 	      var map;
+	      var myLatlng = new google.maps.LatLng(38.748753, -9.153692);
 	      function initialize() {
 	        var mapOptions = {
-	          zoom: 8,
-	          center: new google.maps.LatLng(-34.397, 150.644),
+	          zoom: 17,
+	          center: myLatlng,
 	          mapTypeId: google.maps.MapTypeId.ROADMAP
 	        };
-	        map = new google.maps.Map(document.getElementById('map_canvas'),
-	            mapOptions);
-	      }
+	        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
+	        var marker = new google.maps.Marker({
+		      position: myLatlng,
+		      map: map,
+		      title: 'FISTA 202014'
+		  	});
+	      }
+	      
 	      google.maps.event.addDomListener(window, 'load', initialize);
 	    </script>
 		
@@ -90,6 +101,7 @@
 							<li><a href="#banner" class="scrolly" >Home</a></li>
 							<li><a href="#concurso" class="scrolly" >Concurso</a></li>
 							<li><a href="#programa" class="scrolly" >Programa</a></li>
+							<li><a href="#speakers" class="scrolly" >Oradores</a></li>
 							<li><a href="#organizacao" class="scrolly" >Organização</a></li>
 							<li><a href="#footer" class="scrolly" >Contacto</a></li>
 						</ul>
@@ -149,14 +161,12 @@
 
 			</div>
 
-			<!-- Banner -->
 			<div id="banner" style="background:#121C26;" >
 				<header>
-					<!-- <h2 style="display:inline;">"The sleeping project" </h2> -->
-					<img src="img/sleeping-project.jpg" alt="The sleeping project">
+					<img src="img/sleeping-project.jpg" alt="The sleeping project" class="img-responsive">
 				</header>		
 				<span class="byline" >
-					O FISTA em parceria com a Escola de Tecnologias e Arquitectura e o VFABLAB, desafia-te a criares um Módulo Móvel para Descanço Temporário que envolva elementos das duas áreas de estudo.<br />
+					O FISTA em parceria com a Escola de Tecnologias e Arquitectura e o VFABLAB, desafia-te a criares um Módulo Móvel para Descanso Temporário que envolva elementos das duas áreas de estudo.<br />
 					Junta-te a outros colegas da Escola de Tecnologias e Arquitectura e participa!<br />
 					Temos prémios no valor de 1000€ para os vencedores e a possibilidade de construção da melhor proposta!
 				</span>
@@ -166,7 +176,6 @@
 				<a href="mailto:fista@iscte.pt?subject=Concurso" class="button knowMoreBtn">Inscreve-te!</a>
 			</div>
 
-		<!-- Features -->
 			<div class="wrapper " id="programa" style="padding-top:30px;" >
 				
 				<section id="features" class="container special">
@@ -197,25 +206,25 @@
 									<tr>
 										<td>&nbsp;</td>
 										<td>Sessão de Abertura</td>
-										<td width="45%"><em>a anunciar</em></td>
+										<td width="45%">Reitor Luis Reto</td>
 									</tr>
 									<tr>
 										<td>9.45</td>
 										<td>Keynote Speaker 1</td>
-										<td><em>a anunciar</em></td>
+										<td>Microsoft</td>
 									</tr>
 									<tr>
 										<td>&nbsp;</td>
 										<td>Keynote Speaker 2</td>
-										<td><em>a anunciar</em></td>
+										<td>Sapo</td>
 									</tr>
 									<tr>
 										<td>10.45</td>
 										<td colspan="2" style="text-align:center" ><em>Coffe-break</em></td>
 									</tr>
 									<tr>
-										<td  rowspan="4">11.00</td>
-										<td  rowspan="4">Comunicação e Segurança</td>
+										<td rowspan="4" >11.00</td>
+										<td rowspan="4" style="text-align:center">Comunicação e Segurança</td>
 										<td><em>a anunciar</em></td>
 									</tr>
 									<tr>
@@ -234,7 +243,7 @@
 									<tr>
 										<td>14.00</td>
 										<td>Workshops</td>
-										<td><em>a anunciar</em></td>
+										<td>Caixa Mágica / AGAP2 / Samsung / <em>mais pormenores brevemente</em></td>
 									</tr>
 									<tr>
 										<td>16.00</td>
@@ -265,12 +274,12 @@
 									<tr>
 										<td>&nbsp;</td>
 										<td>Sessão de Abertura</td>
-										<td width="45%"><em>a anunciar</em></td>
+										<td width="45%">Prof. Ricardo Fonsenca</td>
 									</tr>
 									<tr>
 										<td>9.45</td>
 										<td>Keynote Speaker 1</td>
-										<td><em>a anunciar</em></td>
+										<td>CISCO</td>
 									</tr>
 									<tr>
 										<td>&nbsp;</td>
@@ -284,19 +293,19 @@
 									<tr>
 										<td rowspan="5">11.00</td>
 										<td rowspan="5">Outsourcing</td>
-										<td><em>a anunciar</em></td>
+										<td>RUPEAL</td>
 									</tr>
 									<tr>
 										<td><em>a anunciar</em></td>
 									</tr>
 									<tr>
-										<td><em>a anunciar</em></td>
+										<td>Delloite</td>
 									</tr>
 									<tr>
-										<td><em>a anunciar</em></td>
+										<td>Dell</td>
 									</tr>
 									<tr>
-										<td><em>a anunciar</em></td>
+										<td>Novabase</td>
 									</tr>
 									<tr>
 										<td>12.30</td>
@@ -305,10 +314,10 @@
 									<tr>
 										<td rowspan="5">14.00</td>
 										<td rowspan="5">Debate: académicos, empresas e empreendedores discutem o futuro.</td>
-										<td><em>a anunciar</em></td>
+										<td>Nuno Teodoro</td>
 									</tr>
 									<tr>
-										<td><em>a anunciar</em></td>
+										<td>Miguel Duarte</td>
 									</tr>
 									<tr>
 										<td><em>a anunciar</em></td>
@@ -344,28 +353,46 @@
 			</div>
 
 
-		<!-- Carousel 
-			<div class="carousel">
+		
+			<div class="carousel" id="speakers"  style="padding-top:25px;">
 				<div class="reel">
-					<header>
-						<h2>Empresas</h2>
+					<header style="text-align:center;">
+						<h2>Oradores</h2>
 					</header>
 
 					<article>
-						<a href="http://mdomaradzki.deviantart.com/art/Bueller-III-351975087" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<a href="jbkjb" class="image featured"><img src="img/speakers/CarlosBrazao.jpg" alt="" /></a>
 						<header>
-							<h3><a href="#">Empresas</a></h3>
-						</header>
-						<p>Coming Soon.</p>							
+							<h3>Carlos Brazão - CISCO</h3>
+						</header>						
+					</article>
+
+					<article>
+						<a href="" class="image featured"><img src="img/speakers/NunoTeodoro.png" alt="" /></a>
+						<header>
+							<h3>Nuno Teodoro - Layer8</h3>
+						</header>						
+					</article>
+
+					<article>
+						<a href="" class="image featured"><img src="img/speakers/Alexandre Pinho.jpg" alt="" /></a>
+						<header>
+							<h3>Alexandre Pinho - Microsoft</h3>
+						</header>						
+					</article>
+
+					<article>
+						<a href="" class="image featured"><img src="img/speakers/josep.jpg" alt="" /></a>
+						<header>
+							<h3>Josep Llinás - Arquitecto</h3>
+						</header>						
 					</article>
 
 				</div>
-			</div> -->
-
-		<!-- Team -->
+			</div> 
 		
 
-			<div class="carousel" id="organizacao" style="padding-top:25px;">
+			<div class="carousel" id="organizacao" style="padding-top:25px;background:white;">
 
 					<header style="text-align:center;">
 						<h2>Organização</h2>

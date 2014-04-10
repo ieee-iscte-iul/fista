@@ -1233,4 +1233,9 @@
 
 	.open a { background-position: 13px -25px; }
 	
+	.img-responsive {
+		/*display: block;*/
+		height: auto;
+		max-width: 100%;
+	}
 	
